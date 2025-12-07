@@ -1,65 +1,76 @@
-import Image from "next/image";
+"use client";
+
+
+import { useState } from "react";
+import { ChatwootProvider } from "@/lib/chatwoot";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { TreatmentsPanel } from "@/components/TreatmentsPanel";
+import { PatientCRM } from "@/components/PatientCRM";
+import { Scheduler } from "@/components/Scheduler";
+import { AnalyticsDashboard } from "@/components/AnalyticsDashboard";
+import { Stethoscope, Users, Calendar, BarChart3 } from "lucide-react";
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState("treatments");
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+    <ChatwootProvider>
+      <main className="min-h-screen bg-gray-50 flex flex-col">
+        <div className="bg-white border-b px-4 py-2 sticky top-0 z-10 shadow-sm">
+          <Tabs className="w-full">
+            <TabsList className="w-full justify-start overflow-x-auto bg-transparent p-0 space-x-1">
+              <TabsTrigger
+                value="treatments"
+                activeValue={activeTab}
+                setActiveValue={setActiveTab}
+                className="flex items-center gap-2 px-4 py-2 rounded-full border border-transparent bg-gray-100 data-[state=active]:bg-blue-600 data-[state=active]:text-white hover:bg-gray-200 transition-colors"
+              >
+                <Stethoscope className="w-4 h-4" /> <span>Treatments</span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="crm"
+                activeValue={activeTab}
+                setActiveValue={setActiveTab}
+                className="flex items-center gap-2 px-4 py-2 rounded-full border border-transparent bg-gray-100 data-[state=active]:bg-blue-600 data-[state=active]:text-white hover:bg-gray-200 transition-colors"
+              >
+                <Users className="w-4 h-4" /> <span>CRM</span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="schedule"
+                activeValue={activeTab}
+                setActiveValue={setActiveTab}
+                className="flex items-center gap-2 px-4 py-2 rounded-full border border-transparent bg-gray-100 data-[state=active]:bg-blue-600 data-[state=active]:text-white hover:bg-gray-200 transition-colors"
+              >
+                <Calendar className="w-4 h-4" /> <span>Schedule</span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="analytics"
+                activeValue={activeTab}
+                setActiveValue={setActiveTab}
+                className="flex items-center gap-2 px-4 py-2 rounded-full border border-transparent bg-gray-100 data-[state=active]:bg-blue-600 data-[state=active]:text-white hover:bg-gray-200 transition-colors"
+              >
+                <BarChart3 className="w-4 h-4" /> <span>Analytics</span>
+              </TabsTrigger>
+            </TabsList>
+
+            <div className="mt-4">
+              <TabsContent value="treatments" activeValue={activeTab}>
+                <TreatmentsPanel />
+              </TabsContent>
+              <TabsContent value="crm" activeValue={activeTab}>
+                <PatientCRM />
+              </TabsContent>
+              <TabsContent value="schedule" activeValue={activeTab}>
+                <Scheduler />
+              </TabsContent>
+              <TabsContent value="analytics" activeValue={activeTab}>
+                <AnalyticsDashboard />
+              </TabsContent>
+            </div>
+          </Tabs>
         </div>
       </main>
-    </div>
+    </ChatwootProvider>
   );
 }
+

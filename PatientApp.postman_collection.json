@@ -1,0 +1,3096 @@
+{
+	"info": {
+		"_postman_id": "2fdc6a26-bbd5-4ade-a3c4-04e5e6612521",
+		"name": "PatientApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6628339"
+	},
+	"item": [
+		{
+			"name": "1.2 Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"UserName\": \"0303-23-000019\", \"Password\": \"123123\", \"DeviceToken\": \"fSjjWTkIRemgO4j1aCWUUi:APA91bGpzNd9ONA3Y3Lq16cw1Oncz3BLqHd2u5NkNVcxbgzS97xfjuP2s7bYxu2f6re4D_lw9E7B3eckcWlWt6QYBxUoh6ll7Mj8uy2cbbyZv3MmBkVMA-qiPlwzP_YosC1s55E3vX1U\"}"
+				},
+				"url": {
+					"raw": "https://patient.helpful.ihealthcure.com/api/account",
+					"protocol": "https",
+					"host": [
+						"patient",
+						"helpful",
+						"ihealthcure",
+						"com"
+					],
+					"path": [
+						"api",
+						"account"
+					],
+					"query": [
+						{
+							"key": "UserName",
+							"value": "0401-17-046237",
+							"disabled": true
+						},
+						{
+							"key": "Password",
+							"value": "123123",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.2 Logoff",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"PatientId\": \"6bf4ecbc-5946-4996-acf9-6b669cb30304\",\r\n      \"DeviceToken\": \"fSjjWTkIRemgO4j1aCWUUi:APA91bGpzNd9ONA3Y3Lq16cw1Oncz3BLqHd2u5NkNVcxbgzS97xfjuP2s7bYxu2f6re4D_lw9E7B3eckcWlWt6QYBxUoh6ll7Mj8uy2cbbyZv3MmBkVMA-qiPlwzP_YosC1s55E3vX1U\",\r\n      \"Model\": \"sample string 2\",\r\n      \"DeviceVersion\": \"sample string 3\",\r\n      \"Manufacturer\": \"sample string 4\",\r\n      \"AppVersion\": \"sample string 5\",\r\n      \"Token\": \"B30D5EC4-20A1-43A5-A72C-C48C42C1B9F2\",\r\n      \"BranchId\": \"535ac67e-3466-4a8f-96a5-69dcb73b00b6\",\r\n      \"IsLogOffAllDevice\":\"1\"\r\n      }"
+				},
+				"url": {
+					"raw": "https://patient.helpful.ihealthcure.com/api/account/Logoff",
+					"protocol": "https",
+					"host": [
+						"patient",
+						"helpful",
+						"ihealthcure",
+						"com"
+					],
+					"path": [
+						"api",
+						"account",
+						"Logoff"
+					],
+					"query": [
+						{
+							"key": "UserName",
+							"value": "0401-17-046237",
+							"disabled": true
+						},
+						{
+							"key": "Password",
+							"value": "123123",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.2 DeletePatientAccount",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"PatientId\": \"6bf4ecbc-5946-4996-acf9-6b669cb30304\",  \r\n    \"Token\": \"B30D5EC4-20A1-43A5-A72C-C48C42C1B9F2\"\r\n}"
+				},
+				"url": {
+					"raw": "https://patient.helpful.ihealthcure.com/api/account/DeletePatientAccount",
+					"protocol": "https",
+					"host": [
+						"patient",
+						"helpful",
+						"ihealthcure",
+						"com"
+					],
+					"path": [
+						"api",
+						"account",
+						"DeletePatientAccount"
+					],
+					"query": [
+						{
+							"key": "UserName",
+							"value": "0401-17-046237",
+							"disabled": true
+						},
+						{
+							"key": "Password",
+							"value": "123123",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.3 ForgotPassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    Email: \"TESTDEMO@GMAIL.COM\"\r\n}"
+				},
+				"url": {
+					"raw": "https://patient.helpful.ihealthcure.com/api/ForgetPassword",
+					"protocol": "https",
+					"host": [
+						"patient",
+						"helpful",
+						"ihealthcure",
+						"com"
+					],
+					"path": [
+						"api",
+						"ForgetPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.4 ChangePassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{Id:\"a0912b08-abb7-452d-ae6b-6eef925cf886\",Password:\"Asdf@1234\",OldPassword:\"123123\",BranchId:\"5bd60354-fefd-4bcc-a58d-b8e27d802e85\",Token:\"3D7E2491-9912-471E-AEB9-25A03C6BB33D\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/ChangePassword",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"ChangePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.5 ForgotPassword ResetPassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    UserName: \"123-1231-2312\",\r\n    Email:\"testdemo@gmail.com\",\r\n    Password:\"123123\",\r\n    ConfirmPassword:\"123123\",\r\n    VerificationCode:\"370037\"\r\n} "
+				},
+				"url": {
+					"raw": "https://patient.helpful.ihealthcure.com/api/ResetPasword",
+					"protocol": "https",
+					"host": [
+						"patient",
+						"helpful",
+						"ihealthcure",
+						"com"
+					],
+					"path": [
+						"api",
+						"ResetPasword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.6 VerifyForgotPasswordCode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{UserName: \"testdemo@gmail.com\",VerificationCode:\"591142\"} "
+				},
+				"url": {
+					"raw": "https://patient.helpful.ihealthcure.com/api/VerifyCode",
+					"protocol": "https",
+					"host": [
+						"patient",
+						"helpful",
+						"ihealthcure",
+						"com"
+					],
+					"path": [
+						"api",
+						"VerifyCode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.7 SignUp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{FirstName:\"Waqar\",\nMiddleName:\"\",\nLastName:\"AHMED\",\nGuardianName:\"\",\nCNICNumber:\"37402-5879654-4\",\nOtherIdentity:\"\",\nPassport:\"\",\nIdentityRelation:\"\",\nDateOfBirth:\"1980-03-30 15:39:25.840\",\nAddress:\"xyz\",\nCellNumber:\"0300234785789\",\nTelephoneNumber:\"\",\nEmail:\"ifaisalshahzad@gmail.com\",\nNOKFirstName:\"\",\nNOKLastName:\"\",\nNOKCNICNumber:\"\",\nNOKCellNumber:\"\",\nPicturePath:\"637212660478022880_IMG_0003.JPG\",\nPanelEntitleLetter:\"\",\nPanelEntitleLetterB:\"\",\nOccupationId:\"\",\nPanelOrganizationPackageId:\"\",\nGenderId:\"4CAE3D33-E8AA-E711-80C1-A0B3CCE147BA\",\nRelationshipTypeId:\"\",\nPersonTitleId:\"c1b03d33-e8aa-e711-80c1-a0b3cce147ba\",\nPatientTypeId:\"BEB03D33-E8AA-E711-80C1-A0B3CCE147BA\",\nMaritalStatusId:\"61AE3D33-E8AA-E711-80C1-A0B3CCE147BA\",\nBloodGroupId:\"\",\nCountryId:\"9eac3d33-e8aa-e711-80c1-a0b3cce147ba\",\nStateOrProvinceId:\"a4ac3d33-e8aa-e711-80c1-a0b3cce147ba\",\nCityId:\"b9ad3d33-e8aa-e711-80c1-a0b3cce147ba\",\nNOKRelationId:\"\",\nPrefix:\"\",\nIdentityTypeId:\"52AE3D33-E8AA-E711-80C1-A0B3CCE147BA\",\nOrganizationId:\"905C5EE5-5895-49DF-8E11-F44298B76BE4\",\nBranchId:\"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",\nReferenceId:\"\",\nPanelOrganizationId:\"\",\nPanelType:\"1\",\nPanelValidDate:\"\",\nPanelEmployeeCardNo:\"\",\nPanelDepartment:\"\",\nPanelDesignation:\"\",\nPanelRelation:\"\",\nPanelEmployeeCardNoDependent:\"\",\nOnPanelValidDate:\"\",\nOnPanelEmployeeNo:\"\",\nOnPanelDepartment:\"\",\nOnPanelDesignation:\"\",\nOnPanelRelationId:\"\",\nOnPanelOrganizationId:\"\",\nOnPanelOrganizationPackageId:\"\",\nOnPanelEmployeeCardNoDependent:\"\",\nIsTakeRegistrationFee:\"\",\nWorkingSessionId:\"\",\nPatientAppointmentId:\"\",\nDiscountType:\"\",\nDiscount:\"\",\nReference:\"\",\nRemarks:\"\",\nDependentStatus:\"1\",\nPassword:\"123123\",\nConfirmPassword:\"123123\"\n}\n\n"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/SignUp",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"SignUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.7.1 VerifySignUp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{UserName:\"37893-5485798-9\",VerificationCode:\"453301\"  }"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/VerifySignUp",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"VerifySignUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.7.1 GetPersonTitle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://58.65.158.107:64/api/ddl/GetPersonTitle",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"ddl",
+						"GetPersonTitle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.7.2 GetPatientTypes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://58.65.158.107:64/api/ddl/GetPatientTypes",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"ddl",
+						"GetPatientTypes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.7.3 GetRelationshipTypes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://58.65.158.107:64/api/ddl/GetRelationshipTypes",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"ddl",
+						"GetRelationshipTypes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.7.4 GetPanelRelation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://58.65.158.107:64/api/ddl/GetPanelRelation",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"ddl",
+						"GetPanelRelation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.7.5 GetPanelOrganizationPackages",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{BranchId:\"\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/ddl/GetPanelOrganizationPackages ",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"ddl",
+						"GetPanelOrganizationPackages "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.7.6 GetMaritalStatuses",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://58.65.158.107:64/api/ddl/GetMaritalStatuses",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"ddl",
+						"GetMaritalStatuses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.7.7 GetGenders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://58.65.158.107:64/api/ddl/GetGenders",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"ddl",
+						"GetGenders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.7.8 GetBloodGroups",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://58.65.158.107:64/api/ddl/GetBloodGroups",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"ddl",
+						"GetBloodGroups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.7.9 GetIdentityTypes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://58.65.158.107:64/api/ddl/GetIdentityTypes",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"ddl",
+						"GetIdentityTypes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.7.10 GetCountries",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://58.65.158.107:64/api/ddl/GetCountries",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"ddl",
+						"GetCountries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.7.11 GetStateOrProvinces",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{CountryId:\"9eac3d33-e8aa-e711-80c1-a0b3cce147ba\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/ddl/GetStateOrProvinces",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"ddl",
+						"GetStateOrProvinces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.7.12 GetCities",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{StateORProvinceId:\"a4ac3d33-e8aa-e711-80c1-a0b3cce147ba\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/ddl/GetCities",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"ddl",
+						"GetCities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.8 GetProfile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{PatientId: \"d77cd3b5-5dce-4fc9-bf25-ed5447fe83b3\", Token: \"D3C9E7AB-CA29-46FF-AF01-0FA81D1A71BC\", BranchId: \"5bd60354-fefd-4bcc-a58d-b8e27d802e85\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/account/patientprofile?",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"account",
+						"patientprofile"
+					],
+					"query": [
+						{
+							"key": "PatientId",
+							"value": "d463ca2e-856d-4fa6-bd30-b382a0d3bafa",
+							"disabled": true
+						},
+						{
+							"key": "Token",
+							"value": "A3677036-7BD6-4757-B355-5672A5687B9E",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3 Search Doctor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{PatientId: \"\", Token: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\", BranchId: \"\",DoctorName:\"\",WorkLocationId:\"\",SpecialityId:\"\",IsOnline:\"\",MinConsultancyFee:\"\",MaxConsultancyFee:\"\",\nDate:\"\",\nFromTime:\"\",\nToTime:\"\",\nCityId:\"\"}"
+				},
+				"url": {
+					"raw": "https://patient.helpful.ihealthcure.com/api/appointment/searchdoctor",
+					"protocol": "https",
+					"host": [
+						"patient",
+						"helpful",
+						"ihealthcure",
+						"com"
+					],
+					"path": [
+						"api",
+						"appointment",
+						"searchdoctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.0.1 GetLocations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{PatientId: \"530bc9c6-5f7c-e811-80be-005056af7162\", Token: \"03A9286F-4DA6-4C26-BC8B-C6C74A266587\", BranchId: \"5bd60354-fefd-4bcc-a58d-b8e27d802e85\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/appointment/GetLocations",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"appointment",
+						"GetLocations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.0.2 GetSpecialities",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\nPatientId: \"8e3e6ab8-5f7c-e811-80be-005056af7162\", \r\nToken: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\", \r\nBranchId: \"5bd60354-fefd-4bcc-a58d-b8e27d802e85\",\r\nSearch:\"\"\r\n}"
+				},
+				"url": {
+					"raw": "https://patient.helpful.ihealthcure.com/api/appointment/GetSpecialities",
+					"protocol": "https",
+					"host": [
+						"patient",
+						"helpful",
+						"ihealthcure",
+						"com"
+					],
+					"path": [
+						"api",
+						"appointment",
+						"GetSpecialities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.2.5 GetDoctorWorkLocations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DoctorId: \"a8d207e6-7936-446d-975e-3054333e560f\", Token: \"03A9286F-4DA6-4C26-BC8B-C6C74A266587\", BranchId: \"5bd60354-fefd-4bcc-a58d-b8e27d802e85\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/appointment/GetDoctorWorkLocations",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"appointment",
+						"GetDoctorWorkLocations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.2.5.1 DoctorDateWiseSlots",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\nDoctorId:\"e4432301-1a0b-43bd-96e9-08a9e0aeacb5\",\r\nWorkLocationId: \"b19d6d33-e8aa-e711-80c1-a0b3cce147ba\",\r\nDayDate:\"2020-05-05\",\r\nBranchId: \"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",\r\nToken: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\",\r\nIsOnlineConfiguration:\"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://81.108.142.76:64/api/appointment/GetDateWiseDoctorSlot",
+					"protocol": "http",
+					"host": [
+						"81",
+						"108",
+						"142",
+						"76"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"appointment",
+						"GetDateWiseDoctorSlot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.2.5.2 GetNextSlotOrCheckAvailability",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{SessionId: \"53796dd5-a352-e911-80cc-005056af7162\", BookAppointmentDate: \"2020-04-21 14:15\",ExactTime:\"14:15:00\",IsExactTime:\"1\",Token:\"5543263B-0999-4190-8BD0-3D52E6788E0C\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/appointment/GetNextSlot",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"appointment",
+						"GetNextSlot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.2.5.3 Schedule Doctor Appointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DoctorId: \"956315e6-4a1e-4eaa-8a40-f0e9a04609f2\", PatientId: \"530bc9c6-5f7c-e811-80be-005056af7162\",BookDate:\"2020-04-20\",StartTime:\"2020-04-20 14:30\",EndTime:\"2020-04-20 14:45\",WorkLocationId:\"b19d6d33-e8aa-e711-80c1-a0b3cce147ba\",SessionId:\"6aec610f-7862-e911-80c3-005056af756c\", BranchId: \"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",Token:\"5543263B-0999-4190-8BD0-3D52E6788E0C\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/appointment/BookAppointment",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"appointment",
+						"BookAppointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.2.5.4 Consult Now",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\nDoctorId: \"E4432301-1A0B-43BD-96E9-08A9E0AEACB5\",\nPatientId: \"15363ea6-775e-4be2-8d2e-0000370898d8\", \nConsultancyFee:0,\nPaymentMethodId:\"5B1C687C-24CE-E911-80CE-A0B3CCE147C0\",\nVouncherCode:\"\",\nDiscount: \"15\",\nDiscountType:\"0\",\nToken:\"02E8E567-D13B-4B3E-810C-E4F43F83B519\",\nBranchId:\"5bd60354-fefd-4bcc-a58d-b8e27d802e85\",\nDeviceToken:\"\"\n}"
+				},
+				"url": {
+					"raw": "http://81.108.142.76:64/api/appointment/ConsultNow",
+					"protocol": "http",
+					"host": [
+						"81",
+						"108",
+						"142",
+						"76"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"appointment",
+						"ConsultNow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.6 HistoryDoctorAppointments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{PatientId: \"530bc9c6-5f7c-e811-80be-005056af7162\", Token: \"03A9286F-4DA6-4C26-BC8B-C6C74A266587\", BranchId: \"5bd60354-fefd-4bcc-a58d-b8e27d802e85\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/appointment/GetHistory",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"appointment",
+						"GetHistory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.6.1 UpcomingDoctorAppointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{PatientId:\"F3ABE47F-B3FB-4AD1-BD66-B6DC1A30B7A6\",\r\nBranchId:\"D8340ED5-AF5D-4F68-895B-0350114AAB09\",\r\nToken: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\"\r\n}"
+				},
+				"url": {
+					"raw": "http://192.168.88.254:324/api/appointment/GetUpcomingAppointment",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"88",
+						"254"
+					],
+					"port": "324",
+					"path": [
+						"api",
+						"appointment",
+						"GetUpcomingAppointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.6.2 RescheduleDoctorAppointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{AppointmentId:\"03729508-fcf1-4674-a0e8-7fdf0280a761\",DoctorId: \"E4432301-1A0B-43BD-96E9-08A9E0AEACB5\",\nPatientId: \"af85b6f9-13a9-46aa-9f14-89bc68dfab70\",PatientAppointmentId:\"d349fbf7-e294-ea11-80dc-005056af7c10\",\nBookDate:\"2020-05-28\",IsOnlineConsultation:\"false\",\nStartTime:\"2020-05-28 14:15:00\",EndTime:\"2020-05-28 14:29:55\",\nWorkLocationId:\"b19d6d33-e8aa-e711-80c1-a0b3cce147ba\",SessionId:\"53796dd5-a352-e911-80cc-005056af7162\", BranchId: \"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",Token:\"5543263B-0999-4190-8BD0-3D52E6788E0C\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/appointment/Rescheduleappointment",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"appointment",
+						"Rescheduleappointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.6.3 CancelDoctorAppointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{AppointmentId:\"745f579b-1352-4221-ba43-6e4f3799c35d\",BranchId:\"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",Token: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/appointment/Cancel",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"appointment",
+						"Cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatientOPDVisits_PrescriptionReports",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{PatientId:\"F3ABE47F-B3FB-4AD1-BD66-B6DC1A30B7A6\",\r\nBranchId:\"D8340ED5-AF5D-4F68-895B-0350114AAB09\",\r\nToken: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\"\r\n}"
+				},
+				"url": {
+					"raw": "http://192.168.88.254:324/api/account/PatientOPDVisits?",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"88",
+						"254"
+					],
+					"port": "324",
+					"path": [
+						"api",
+						"account",
+						"PatientOPDVisits"
+					],
+					"query": [
+						{
+							"key": "PatientId",
+							"value": "d463ca2e-856d-4fa6-bd30-b382a0d3bafa",
+							"disabled": true
+						},
+						{
+							"key": "Token",
+							"value": "A3677036-7BD6-4757-B355-5672A5687B9E",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DischargesReports",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{PatientId: \"530bc9c6-5f7c-e811-80be-005056af7162\", Token: \"03A9286F-4DA6-4C26-BC8B-C6C74A266587\", BranchId: \"5bd60354-fefd-4bcc-a58d-b8e27d802e85\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/account/PatientDischarges",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"account",
+						"PatientDischarges"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Diagnostics Reports",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{PatientId:\"F3ABE47F-B3FB-4AD1-BD66-B6DC1A30B7A6\",\r\nBranchId:\"D8340ED5-AF5D-4F68-895B-0350114AAB09\",\r\nToken: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\"\r\n}"
+				},
+				"url": {
+					"raw": "http://192.168.88.254:324/api/account/PatientDiagnostics",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"88",
+						"254"
+					],
+					"port": "324",
+					"path": [
+						"api",
+						"account",
+						"PatientDiagnostics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InvestigationsReports",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{PatientId:\"F3ABE47F-B3FB-4AD1-BD66-B6DC1A30B7A6\",\r\nBranchId:\"D8340ED5-AF5D-4F68-895B-0350114AAB09\",\r\nToken: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1183/api/account/PatientInvestigations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1183",
+					"path": [
+						"api",
+						"account",
+						"PatientInvestigations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAppointmentRequestList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start\": \"0\",\r\n    \"length\": \"10\",\r\n    \"IsDoNotApplyDateRangeFilter\": \"1\",\r\n    \"IsAllServicesAppointments\": \"1\",\r\n    \"PatientId\": \"f3abe47f-b3fb-4ad1-bd66-b6dc1a30b7a6\",\r\n    \"IsAPI\": \"false\",\r\n    \"HistoryFilterStatus\":\"0\"\r\n}"
+				},
+				"url": {
+					"raw": "http://192.168.88.254:324/api/account/GetAppointmentRequestList",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"88",
+						"254"
+					],
+					"port": "324",
+					"path": [
+						"api",
+						"account",
+						"GetAppointmentRequestList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSession",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DoctorId: \"956315e6-4a1e-4eaa-8a40-f0e9a04609f2\",Token:\"5543263B-0999-4190-8BD0-3D52E6788E0C\", WorkLocationId: \"B19D6D33-E8AA-E711-80C1-A0B3CCE147BA\"}\n"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/appointment/GetSession",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"appointment",
+						"GetSession"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllSlot",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{StartTime: \"09:00:00\", EndTime: \"15:00:00\", Interval: \"15\",Token:\"5543263B-0999-4190-8BD0-3D52E6788E0C\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/appointment/GetAllSlot",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"appointment",
+						"GetAllSlot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UploadFile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "FileUpload",
+							"type": "file",
+							"src": "/C:/Users/Faisal/Downloads/IndividualReport.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/UploadFile",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"UploadFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.7.13 GetOccupations",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/ddl/GetOccupations",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"ddl",
+						"GetOccupations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.7.14 GetNOKRelations",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://58.65.158.107:64/api/ddl/GetNOKRelations",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"ddl",
+						"GetNOKRelations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.0 GetDiagnosticAppointmentHistory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    PatientId: \"530bc9c6-5f7c-e811-80be-005056af7162\", \n    DiagnosticId:\"\",\n    Token: \"03A9286F-4DA6-4C26-BC8B-C6C74A266587\", \n    BranchId: \"5bd60354-fefd-4bcc-a58d-b8e27d802e85\"\n}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/diagnosticappointment/GetDiagnosticAppointmentHistory",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"diagnosticappointment",
+						"GetDiagnosticAppointmentHistory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.1 GetUpcomingDiagnosticAppointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    PatientId: \"530bc9c6-5f7c-e811-80be-005056af7162\",\n    DiagnosticId:\"\",\n    Token: \"03A9286F-4DA6-4C26-BC8B-C6C74A266587\", \n    \"TypeBit\": \"25\",\n    BranchId: \"5bd60354-fefd-4bcc-a58d-b8e27d802e85\"\n}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/appointment/GetHistory",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"appointment",
+						"GetHistory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.2 GetDiagnostics",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PatientId\": \"F3ABE47F-B3FB-4AD1-BD66-B6DC1A30B7A6\",\r\n    \"Token\": \"905D6806-8A67-4D21-867D-601BE54EF550\",\r\n    \"BranchId\": \"D8340ED5-AF5D-4F68-895B-0350114AAB09\"\r\n}"
+				},
+				"url": {
+					"raw": "http://192.168.88.254:324/api/diagnosticappointment/GetDiagnostics",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"88",
+						"254"
+					],
+					"port": "324",
+					"path": [
+						"api",
+						"diagnosticappointment",
+						"GetDiagnostics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.3 GetDiagnosticCenters",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    DiagnosticId:\"e8c9e77c-ce1c-4d00-b314-68d0470d80c0\",\r\n    TypeBit:\"3\",\r\n    Latitude:\"\",\r\n    Longitude:\"\",\r\n    BranchId:\"\",\r\n    Token:\"44717866-70BA-4223-8F97-45286B2FD599\"\r\n}"
+				},
+				"url": {
+					"raw": "http://192.168.88.254:324/api/diagnosticappointment/GetDiagnosticCenters",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"88",
+						"254"
+					],
+					"port": "324",
+					"path": [
+						"api",
+						"diagnosticappointment",
+						"GetDiagnosticCenters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.4 GetDateWiseDiagnosticSlots",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    DiagnosticId:\"e8c9e77c-ce1c-4d00-b314-68d0470d80c0\" ,\n    DayDate:\"2023-10-28\",  \n    DiagnosticCenterId: \"d8340ed5-af5d-4f68-895b-0350114aab09\",\n    Token: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\"\n}"
+				},
+				"url": {
+					"raw": "http://192.168.88.254:324/api/diagnosticappointment/GetDateWiseDiagnosticSlots",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"88",
+						"254"
+					],
+					"port": "324",
+					"path": [
+						"api",
+						"diagnosticappointment",
+						"GetDateWiseDiagnosticSlots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.41 BookDiagnosticAppointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\nPatientId: \"F3ABE47F-B3FB-4AD1-BD66-B6DC1A30B7A6\",\nDiagnosticId:\"e8c9e77c-ce1c-4d00-b314-68d0470d80c0\",\nSessionId:\"168359eb-3851-ee11-80c3-005056af5a7b\",\nPrescribedByDoctorId:\"\",\nBookingDate:\"2023-10-28\",\nBookingTime:\"14:30:00\",\nDiscountStatus:\"\",\nClinicalHistory:\"\",\nIsReserve:\"0\",\nWorkLocationId:\"\",\nDiagnosticCenterId: \"d8340ed5-af5d-4f68-895b-0350114aab09\",\nToken:\"5543263B-0999-4190-8BD0-3D52E6788E0C\"\n}"
+				},
+				"url": {
+					"raw": "http://192.168.88.254:324/api/diagnosticappointment/BookDiagnosticAppointment",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"88",
+						"254"
+					],
+					"port": "324",
+					"path": [
+						"api",
+						"diagnosticappointment",
+						"BookDiagnosticAppointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.12 RescheduleDiagnosticAppointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\nDiagnosticAppointmentId:\"9c317119-52eb-40d6-9e5d-9956c31eec6c\",\nPatientDiagnosticAppointmentId:\"1c4c0c8b-5a85-ea11-80db-005056af7c10\",\nPatientId: \"3e63bbda-70bc-439c-986b-b101c6328680\",\nDiagnosticId:\"2510beab-1627-46f2-a2f7-8a199201983b\",\nSessionId:\"28f949ba-4767-ea11-80d7-005056af7c10\",\nPrescribedByDoctorId:\"\",\nBookingDate:\"2020-05-04\",\nBookingTime:\"10:00:00\",\nDiscountStatus:\"\",\nClinicalHistory:\"\",\nIsReserve:\"0\",\nWorkLocationId:\"\",\nDiagnosticCenterId: \"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",\nToken:\"5543263B-0999-4190-8BD0-3D52E6788E0C\"\n}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/diagnosticappointment/RescheduleDiagnosticAppointment",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"diagnosticappointment",
+						"RescheduleDiagnosticAppointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.13 CancelDiagnosticAppointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DiagnosticAppointmentId:\"9c317119-52eb-40d6-9e5d-9956c31eec6c\",PatientId:\"3e63bbda-70bc-439c-986b-b101c6328680\",PatientDiagnosticAppointmentId:\"1f823c31-5b85-ea11-80db-005056af7c10\",DiagnosticCenterId: \"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",Token: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/diagnosticappointment/CancelDiagnosticAppointment",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"diagnosticappointment",
+						"CancelDiagnosticAppointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.46 GetNextDiagnosticSlot",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DiagnosticId:\"2510beab-1627-46f2-a2f7-8a199201983b\" ,SessionId:\"\",DayDate:\"2020-04-22\",IsExactTime :\"0\",ExactTime:\"\",\nBranchId: \"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",Token: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/diagnosticappointment/GetNextDiagnosticSlot",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"diagnosticappointment",
+						"GetNextDiagnosticSlot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.6 ConfirmDiagnosticAppointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DiagnosticIdAppointmentId:\"ca73374f-3b85-ea11-80ce-005056af756c\",PatientId:\"530bc9c6-5f7c-e811-80be-005056af7162\",PatientDiagnosticAppointmentId:\"ca73374f-3b85-ea11-80ce-005056af756c\",BranchId: \"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",Token: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/diagnosticappointment/ConfirmDiagnosticAppointment",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"diagnosticappointment",
+						"ConfirmDiagnosticAppointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.0 GetHistoryLabTest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{PatientId:\"F3ABE47F-B3FB-4AD1-BD66-B6DC1A30B7A6\",\r\nBranchId:\"D8340ED5-AF5D-4F68-895B-0350114AAB09\",\r\nToken: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\"\r\n}"
+				},
+				"url": {
+					"raw": "http://192.168.88.254:324/api/labs/GetHistoryLabTest",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"88",
+						"254"
+					],
+					"port": "324",
+					"path": [
+						"api",
+						"labs",
+						"GetHistoryLabTest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 GetUpComingLabTest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{PatientId:\"F3ABE47F-B3FB-4AD1-BD66-B6DC1A30B7A6\",\r\nBranchId:\"D8340ED5-AF5D-4F68-895B-0350114AAB09\",\r\nToken: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\"\r\n}"
+				},
+				"url": {
+					"raw": "http://192.168.88.254:324/api/labs/GetUpComingLabTest",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"88",
+						"254"
+					],
+					"port": "324",
+					"path": [
+						"api",
+						"labs",
+						"GetUpComingLabTest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.11 RescheduleLabTest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\tLabTestChallanNo:\"Lab0401AACJ6638\",\n\tPatientId: \"530bc9c6-5f7c-e811-80be-005056af7162\",\n\tDate:\"2020-04-25\",\n    Time:\"11:00:00\",\n\tLabId: \"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",\n\tToken: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\"\n\n\n}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/labs/RescheduleLabTest",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"labs",
+						"RescheduleLabTest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.2 GetLabs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{TypeBit:\"2\",Latitude:\"\",Longitude:\"\",BranchId:\"5bd60354-fefd-4bcc-a58d-b8e27d802e85\",Token:\"44717866-70BA-4223-8F97-45286B2FD599\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/labs/GetLabs",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"labs",
+						"GetLabs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.3 GetLabTests",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{LabId:\"\",Token:\"44717866-70BA-4223-8F97-45286B2FD599\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/labs/GetLabTests",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"labs",
+						"GetLabTests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.4 ConfirmLabTestPayment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"AdditionalSubServices\": [],\n    \"Address\": \"\",\n    \"AddressDetail\": \"\",\n    \"AirlineId\": \"\",\n    \"AirportId\": \"\",\n    \"ConsentFormLink\": \"\",\n    \"Date\": \"2022-10-21\",\n    \"Distance\": \"\",\n    \"DoctorId\": \"\",\n    \"FlightDate\": \" \",\n    \"FlightDestinationId\": \"\",\n    \"FlightNo\": \"\",\n    \"LabId\": \"b0fdf2bd-5164-4352-be75-4a37c4893941\",\n    \"LabTests\": [\n        {\n            \"LabTestId\": \"7983a5fb-1dba-4033-ae6e-000d063d9c3b\",\n            \"Price\": \"4200.0\",\n            \"TypeBit\": \"2\"\n        }\n    ],\n    \"Latitude\": \"\",\n    \"Longitude\": \"\",\n    \"OutDoorDoctor\": \"Self\",\n    \"PackageGroupDiscountRate\": \"\",\n    \"PackageGroupDiscountType\": \"\",\n    \"PackageGroupId\": \"\",\n    \"PackageGroupName\": \"\",\n    \"PaidAmount\": \"4200.0\",\n    \"PassengerNameRecord\": \"\",\n    \"PassportImage\": \"\",\n    \"PassportNo\": \"\",\n    \"PatientId\": \"47957ec0-5acc-4cf2-99c6-cb563fb13e35\",\n    \"PaymentMethodId\": \"\",\n    \"PaymentMethodValue\": \"\",\n    \"SampleImage\": \"\",\n    \"TicketImage\": \"\",\n    \"Time\": \"15:54\",\n    \"Token\": \"4AEC730B-3329-4CC0-84D4-D5B5AC35AE41\",\n    \"VouncherCode\": \"\"\n}"
+				},
+				"url": {
+					"raw": "http://192.168.88.90:254/api/labs/ConfirmLabTestPayment",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"88",
+						"90"
+					],
+					"port": "254",
+					"path": [
+						"api",
+						"labs",
+						"ConfirmLabTestPayment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.1 GetFamilyMembers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PatientId\": \"58dd52e1-ec19-46ba-ac8d-3ed13eea374f\", \r\n    \"BranchId\": \"D8340ED5-AF5D-4F68-895B-0350114AAB09\",\r\n    \"Token\": \"EF963284-DA80-47E6-BB81-6F62D439C14D\"\r\n}"
+				},
+				"url": {
+					"raw": "http://192.168.88.254:324/api/account/FamilyMembers",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"88",
+						"254"
+					],
+					"port": "324",
+					"path": [
+						"api",
+						"account",
+						"FamilyMembers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.2 SearchFamilyMember",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PatientId\": \"58dd52e1-ec19-46ba-ac8d-3ed13eea374f\", \r\n    \"IdentityNo\": \"0223-23-001367\",\r\n    \"BranchId\": \"D8340ED5-AF5D-4F68-895B-0350114AAB09\",\r\n    \"Token\": \"EF963284-DA80-47E6-BB81-6F62D439C14D\"\r\n}"
+				},
+				"url": {
+					"raw": "http://192.168.88.254:324/api/Search",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"88",
+						"254"
+					],
+					"port": "324",
+					"path": [
+						"api",
+						"Search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.3 AddExistingFamilyMember",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"PatientId\": \"58dd52e1-ec19-46ba-ac8d-3ed13eea374f\", \r\n\"FamilyMemberPatientId\": \"70ca3288-f713-485d-a50c-87380e6cf89d\", \r\n\"FamilyMemberCNIC\": \"102938452\", \r\n\"MRNO\": \"0223-23-001367\", \r\n\"DocumentOfProof\":\" /File/Download/Patient/231012-A019.pdf\", \r\n\"BranchId\": \"d8340ed5-af5d-4f68-895b-0350114aab09\", \r\n\"Token\": \"EF963284-DA80-47E6-BB81-6F62D439C14D\", \r\n\"FromFamilyMemberRelationId\": \"54112B27-49D9-EA11-80D6-AC162D7327A7\",\r\n\"PatientName\":\"Mr. Muneeb  (Regular)\",\r\n\"Email\":\"touseefurrehman063@gmail.com\",\r\n\"GenderId\":\"4cae3d33-e8aa-e711-80c1-a0b3cce147ba\",\r\n\"CellNumber\":\"034184955\",\r\n\"DateOfBirth\":\"1980-03-30T00:00:00\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1183/api/AddExistingFamilyMember",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1183",
+					"path": [
+						"api",
+						"AddExistingFamilyMember"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.4 AddFamilyMember",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    PatientId: \"16916EBA-BEE5-4635-A614-00014D6667AE\",\r\n    BranchId:\"D8340ED5-AF5D-4F68-895B-0350114AAB09\",\r\nFirstName:\"Test\",\r\nMiddleName:\"\",\r\nLastName:\"Patient\",\r\nGuardianName:\"\",\r\nCNICNumber:\"\",\r\nOtherIdentity:\"\",\r\nPassport:\"\",\r\nIdentityRelation:\"\",\r\nDateOfBirth:\"1980-03-30 15:39:25.840\",\r\nAddress:\"xyz\",\r\nCellNumber:\"0300234785789\",\r\nTelephoneNumber:\"\",\r\nEmail:\"\",\r\nNOKFirstName:\"\",\r\nNOKLastName:\"\",\r\nNOKCNICNumber:\"\",\r\nNOKCellNumber:\"\",\r\nPicturePath:\"637212660478022880_IMG_0003.JPG\",\r\nPanelEntitleLetter:\"\",\r\nPanelEntitleLetterB:\"\",\r\nOccupationId:\"\",\r\nPanelOrganizationPackageId:\"\",\r\nGenderId:\"\",\r\nRelationshipTypeId:\"\",\r\nPersonTitleId:\"\",\r\nPatientTypeId:\"BEB03D33-E8AA-E711-80C1-A0B3CCE147BA\",\r\nMaritalStatusId:\"61AE3D33-E8AA-E711-80C1-A0B3CCE147BA\",\r\nBloodGroupId:\"\",\r\nCountryId:\"9eac3d33-e8aa-e711-80c1-a0b3cce147ba\",\r\nStateOrProvinceId:\"a4ac3d33-e8aa-e711-80c1-a0b3cce147ba\",\r\nCityId:\"b9ad3d33-e8aa-e711-80c1-a0b3cce147ba\",\r\nNOKRelationId:\"\",\r\nPrefix:\"\",\r\nIdentityTypeId:\"52AE3D33-E8AA-E711-80C1-A0B3CCE147BA\",\r\nOrganizationId:\"905C5EE5-5895-49DF-8E11-F44298B76BE4\",\r\nReferenceId:\"\",\r\nPanelOrganizationId:\"\",\r\nPanelType:\"1\",\r\nPanelValidDate:\"\",\r\nPanelEmployeeCardNo:\"\",\r\nPanelDepartment:\"\",\r\nPanelDesignation:\"\",\r\nPanelRelation:\"\",\r\nPanelEmployeeCardNoDependent:\"\",\r\nOnPanelValidDate:\"\",\r\nOnPanelEmployeeNo:\"\",\r\nOnPanelDepartment:\"\",\r\nOnPanelDesignation:\"\",\r\nOnPanelRelationId:\"\",\r\nOnPanelOrganizationId:\"\",\r\nOnPanelOrganizationPackageId:\"\",\r\nOnPanelEmployeeCardNoDependent:\"\",\r\nIsTakeRegistrationFee:\"\",\r\nWorkingSessionId:\"\",\r\nPatientAppointmentId:\"\",\r\nDiscountType:\"\",\r\nDiscount:\"\",\r\nReference:\"\",\r\nRemarks:\"\",\r\nDependentStatus:\"1\",\r\nFamilyMemberCNIC:\"37402-5896541-4\",\r\nAtttachmentCNICFontSide:\"/File/Download/Patient/132302019395862050.jpg\",\r\nAtttachmentCNICBackSide:\"/File/Download/Patient/132302019396021637.jpg\",\r\nDocumentOfProof:\"/File/Download/Patient/132302019396031588.pdf\",\r\nFromFamilyMemberRelationId:\"54112B27-49D9-EA11-80D6-AC162D7327A7\"\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:1183/api/AddFamilyMember",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1183",
+					"path": [
+						"api",
+						"AddFamilyMember"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.5 RemoveFamilyMember",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    Id:\"3b53064c-e214-453e-9c5b-12eb0177d87d\",\r\n    ActionById:\"F3ABE47F-B3FB-4AD1-BD66-B6DC1A30B7A6\",\r\n    BranchId:\"D8340ED5-AF5D-4F68-895B-0350114AAB09\",\r\n    Token:\"B921EB47-E647-4A43-BCF4-1CBB0E5BE6E4\"\r\n}"
+				},
+				"url": {
+					"raw": "http://192.168.88.254:324/api/RemoveFamilyMember",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"88",
+						"254"
+					],
+					"port": "324",
+					"path": [
+						"api",
+						"RemoveFamilyMember"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.6 GetFamilyMemberRelations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PatientId\": \"F3ABE47F-B3FB-4AD1-BD66-B6DC1A30B7A6\", \r\n    \"BranchId\": \"D8340ED5-AF5D-4F68-895B-0350114AAB09\",\r\n    \"Token\": \"FE142EBA-B55B-4493-ACD0-91CBA962BFCB\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1183/api/ddl/GetFamilyMemberRelations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1183",
+					"path": [
+						"api",
+						"ddl",
+						"GetFamilyMemberRelations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://58.65.158.107:64/api/account/GetPaymentMethods",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{IsWeb:\"false\",IsMobile:\"true\",IsHIMS:\"false\",BranchId:\"5bd60354-fefd-4bcc-a58d-b8e27d802e85\",Token:\"44717866-70BA-4223-8F97-45286B2FD599\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/account/GetPaymentMethods",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"account",
+						"GetPaymentMethods"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://58.65.158.107:64/api/account/UpdateProfile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\nPatientId:\"d77cd3b5-5dce-4fc9-bf25-ed5447fe83b3\",\nFirstName:\"Mujahid\",\nMiddleName:\"Test\",\nLastName:\"Patient\",\nGuardianName:\"Ghulam Hussain\",\nIdentityRelation:\"\",\nDateOfBirth:\"1954-02-02 00:00:00.000\",\nAddress:\"Kashmiri Imam Bargah Golimar H Ab-26 Karachi\",\nCellNumber:\"03327764415\",\nTelephoneNumber:\"03353554977\",\nEmail:\"mujahidkhosa@gmail.com\",\nNOKFirstName:\"test\",\nNOKLastName:\"test\",\nNOKCNICNumber:\"37893-5423560-5\",\nNOKCellNumber:\"03327764415\",\nPicturePath:\"637212660478022880_IMG_0003.JPG\",\nOccupationId:\"\",\nGenderId:\"4DAE3D33-E8AA-E711-80C1-A0B3CCE147BA\",\nRelationshipTypeId:\"CEB03D33-E8AA-E711-80C1-A0B3CCE147BA\",\nPersonTitleId:\"C2B03D33-E8AA-E711-80C1-A0B3CCE147BA\",\nPatientTypeId:\"BEB03D33-E8AA-E711-80C1-A0B3CCE147BA\",\nMaritalStatusId:\"62AE3D33-E8AA-E711-80C1-A0B3CCE147BA\",\nCountryId:\"9eac3d33-e8aa-e711-80c1-a0b3cce147ba\",\nStateOrProvinceId:\"a4ac3d33-e8aa-e711-80c1-a0b3cce147ba\",\nCityId:\"b9ad3d33-e8aa-e711-80c1-a0b3cce147ba\",\nNOKRelationId:\"\",\nPrefix:\"\",\nIdentityTypeId:\"52AE3D33-E8AA-E711-80C1-A0B3CCE147BA\",\nReferenceId:\"\",\nBranchId:\"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",\nToken:\"35CBC20A-3BA6-40DD-A443-3F6B94628792\",\n\n\n}"
+				},
+				"url": {
+					"raw": "http://10.10.10.43:64/api/account/UpdateProfile",
+					"protocol": "http",
+					"host": [
+						"10",
+						"10",
+						"10",
+						"43"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"account",
+						"UpdateProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://58.65.158.107:64/Api/Account/ConfirmDoctorPayment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/Api/Account/ConfirmDoctorPayment",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"Api",
+						"Account",
+						"ConfirmDoctorPayment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://58.65.158.107:64/api/ReSendverifySignupCode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{PatientId:\"\",MRNO:\"0401-20-035006\",Email:\"majida_91@hotmail.com\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/ReSendverifySignupCode",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"ReSendverifySignupCode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookDoctorAppointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DoctorId: \"E4432301-1A0B-43BD-96E9-08A9E0AEACB5\", PatientId: \"af85b6f9-13a9-46aa-9f14-89bc68dfab70\",BookDate: \"2020-05-28\",StartTime: \"2020-05-28 14:30:00\",EndTime: \"2020-05-25 14:44:55\",IsOnlineConsultation: \"true\",\nWorkLocationId: \"b19d6d33-e8aa-e711-80c1-a0b3cce147ba\",SessionId: \"53796dd5-a352-e911-80cc-005056af7162\", BranchId: \"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",Token: \"5543263B-0999-4190-8BD0-3D52E6788E0C\"\n}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/appointment/BookAppointment",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"appointment",
+						"BookAppointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://58.65.158.107:64/api/diagnosticappointment/ConfirmDiagnosticAppointmentPayment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DiagnosticId:\"2510beab-1627-46f2-a2f7-8a199201983b\",\nPatientId: \"af85b6f9-13a9-46aa-9f14-89bc68dfab70\",\nDiagnosticAppointmentId:\"b1702e4e-4b65-4544-8004-48077c58f41b\",\nPatientDiagnosticAppointmentId:\"efd67b84-4685-ea11-80db-005056af7c10\",\nPaymentMethodId:\"5B1C687C-24CE-E911-80CE-A0B3CCE147C0\",\nVouncherCode:\"\",\nPrice:\"250\",\n\nDiagnosticCenterId: \"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",Token: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/diagnosticappointment/ConfirmDiagnosticAppointmentPayment",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"diagnosticappointment",
+						"ConfirmDiagnosticAppointmentPayment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://58.65.158.107:64/api/appointment/ValidateVoucherCode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{PatinetId:\"530bc9c6-5f7c-e811-80be-005056af7162\",VoucherCode:\"iHC\",Token:\"ABB358A1-301C-4BBD-B8B7-01A1D903F770\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/appointment/ValidateVoucherCode",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"appointment",
+						"ValidateVoucherCode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://58.65.158.107:64/api/Account/ResendFogotPasswordCode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{Email:\"majida_91@hotmail.com\"}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/Account/ResendFogotPasswordCode",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"Account",
+						"ResendFogotPasswordCode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://58.65.158.107:64/api/account/CNICAvailibility",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\tCNICNumber:\"32102-3353158-1\",\n\t\n}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/account/CNICAvailibility",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"account",
+						"CNICAvailibility"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://58.65.158.107:64/api/lab/CancelLabAppointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\tLabTestChallanNo:\"PP0401AAAA0050\",\n\tPatientId: \"af85b6f9-13a9-46aa-9f14-89bc68dfab70\",\n\tLabId: \"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",\n\tToken: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\"\n\n}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/lab/CancelLabAppointment",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"lab",
+						"CancelLabAppointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "medicinesummary",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\tPatientId:\"af85b6f9-13a9-46aa-9f14-89bc68dfab70\",\n\tToken:\"9F09B541-919E-468F-B82B-7433FED54F35\",\n}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/account/medicinesummary",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"account",
+						"medicinesummary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetServiceCities",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{PatientId: \"530bc9c6-5f7c-e811-80be-005056af7162\", Token: \"03A9286F-4DA6-4C26-BC8B-C6C74A266587\", BranchId: \"5bd60354-fefd-4bcc-a58d-b8e27d802e85\"}"
+				},
+				"url": {
+					"raw": "http://10.10.10.43:64/api/ddl/GetServiceCities",
+					"protocol": "http",
+					"host": [
+						"10",
+						"10",
+						"10",
+						"43"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"ddl",
+						"GetServiceCities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddFavouriteDoctor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    DoctorId: \"956315e6-4a1e-4eaa-8a40-f0e9a04609f2\", \r\n    PatientId: \"530bc9c6-5f7c-e811-80be-005056af7162\",\r\n    BranchId: \"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",\r\n    Token:\"5543263B-0999-4190-8BD0-3D52E6788E0C\"\r\n}"
+				},
+				"url": {
+					"raw": "http://10.10.10.43:64/api/account/AddFavouriteDoctor",
+					"protocol": "http",
+					"host": [
+						"10",
+						"10",
+						"10",
+						"43"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"account",
+						"AddFavouriteDoctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemovedFavouriteDoctor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    DoctorId: \"3a7415ca-2f00-e911-80c4-005056af7162\", \r\n    PatientId: \"af85b6f9-13a9-46aa-9f14-89bc68dfab70\",\r\n    BranchId: \"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",\r\n    Token:\"FA093F46-4379-442B-B0E6-A1B3A9A4AF26\"\r\n}"
+				},
+				"url": {
+					"raw": "http://10.10.10.43:64/api/account/RemovedFavouriteDoctor",
+					"protocol": "http",
+					"host": [
+						"10",
+						"10",
+						"10",
+						"43"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"account",
+						"RemovedFavouriteDoctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetFavouriteDoctors",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{PatientId: \"530BC9C6-5F7C-E811-80BE-005056AF7162\", \r\nToken: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\", \r\nBranchId: \"5bd60354-fefd-4bcc-a58d-b8e27d802e85\",\r\nDoctorName:\"\",\r\nWorkLocationId:\"\",\r\nSpecialityId:\"\",IsOnline:\"false\"\r\n,MinConsultancyFee:\"\"\r\n,MaxConsultancyFee:\"\",\r\nDate:\"\",\r\nFromTime:\"\",\r\nToTime:\"\",\r\nCityId:\"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://58.65.158.107:64/api/account/GetFavouriteDoctors",
+					"protocol": "http",
+					"host": [
+						"58",
+						"65",
+						"158",
+						"107"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"account",
+						"GetFavouriteDoctors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RejectConsulation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\nDoctorId:\"e4432301-1a0b-43bd-96e9-08a9e0aeacb5\",\r\nPatientId: \"b19d6d33-e8aa-e711-80c1-a0b3cce147ba\",\r\nvisitNo:\"200703-A007\",\r\nBranchId: \"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",\r\nToken: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\"\r\n}"
+				},
+				"url": {
+					"raw": "http://81.108.142.76:64/api/appointment/RejectConsulation",
+					"protocol": "http",
+					"host": [
+						"81",
+						"108",
+						"142",
+						"76"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"appointment",
+						"RejectConsulation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CancelConsulation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\nDoctorId: \"E4432301-1A0B-43BD-96E9-08A9E0AEACB5\",\r\nPatientId: \"15363EA6-775E-4BE2-8D2E-0000370898D8\",\r\nVisitNo:\"200703-A006\",\r\nBranchId: \"5BD60354-FEFD-4BCC-A58D-B8E27D802E85\",\r\nToken: \"ABB358A1-301C-4BBD-B8B7-01A1D903F770\"\r\n}"
+				},
+				"url": {
+					"raw": "http://81.108.142.76:64/api/appointment/CancelConsulation",
+					"protocol": "http",
+					"host": [
+						"81",
+						"108",
+						"142",
+						"76"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"appointment",
+						"CancelConsulation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDoctorPracticeLocation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{DoctorId: \"e4432301-1a0b-43bd-96e9-08a9e0aeacb5\",\r\nToken:\"\"} "
+				},
+				"url": {
+					"raw": "http://81.108.142.76:64/api/doctor/GetDoctorPracticeLocation",
+					"protocol": "http",
+					"host": [
+						"81",
+						"108",
+						"142",
+						"76"
+					],
+					"port": "64",
+					"path": [
+						"api",
+						"doctor",
+						"GetDoctorPracticeLocation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPatientNotifications",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    PatientId: \"58B13AFF-F320-4F29-87EB-0000492CEB05\",\r\n    BranchId: \"D8340ED5-AF5D-4F68-895B-0350114AAB09\",\r\n    Start: 0,\r\n    Length: 10,\r\n    FromDate: \"2023-10-01\",\r\n    ToDate: \"2023-10-30\",\r\n    Search:\"\",\r\n    OrderDir:\"desc\",\r\n    OrderColumn:0,\r\n    Token: \"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1183/api/account/GetPatientNotifications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1183",
+					"path": [
+						"api",
+						"account",
+						"GetPatientNotifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserNotifications",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    UserId: \"A7BF6FB2-ACA6-4A0A-AECD-0CE0D3B11A0E\",\r\n    BranchId: \"535AC67E-3466-4A8F-96A5-69DCB73B00B6\",\r\n    Start: 0,\r\n    Length: 10,\r\n    FromDate: \"2023-10-02\",\r\n    ToDate: \"2023-10-31\",\r\n    Search:\"\",\r\n    OrderDir:\"desc\",\r\n    OrderColumn:0,\r\n    Token: \"\"\r\n}"
+				},
+				"url": {
+					"raw": "https://patient.helpful.ihealthcure.com/api/account/GetUserNotifications",
+					"protocol": "https",
+					"host": [
+						"patient",
+						"helpful",
+						"ihealthcure",
+						"com"
+					],
+					"path": [
+						"api",
+						"account",
+						"GetUserNotifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/tap/charge",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"Token\":\"\",\r\n    \"amount\": \"9\",\r\n    \"currency\":\"SAR\",\r\n    \"description\":\"Mr. Faisal Shahzad S/O Muhammad Mushtaq\",\r\n    \"transaction\":\"PP0401AAAA0001\",\r\n    \"order\":\"PP0401AAAA0001\",\r\n    \"first_name\":\"Mr. Faisal Shahzad S/O Muhammad Mushtaq\",\r\n    \"email\":\"ifaisalshahzad@gmail.com\",\r\n    \"phone_country_code\":\"923\",\r\n    \"phone_number\":\"348702874\",\r\n    \"PatientId\": \"123123123\",\r\n    \"VisitNo\":\"20230906-A001\",\r\n    \"ChatURL\":\"20230906-A001\"\r\n} "
+				},
+				"url": {
+					"raw": "http://localhost:1183/api/tap/charge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1183",
+					"path": [
+						"api",
+						"tap",
+						"charge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/tap/retrievecharge",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    Token:\"\",\r\n    \"charge_id\": \"chg_TS01A0720230712Mw000609529\"\r\n} "
+				},
+				"url": {
+					"raw": "http://localhost:1183/api/tap/retrievecharge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1183",
+					"path": [
+						"api",
+						"tap",
+						"retrievecharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MatchFingerPrint",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{PatientId: \"e4432301-1a0b-43bd-96e9-08a9e0aeacb5\",\r\nUserId: \"e4432301-1a0b-43bd-96e9-08a9e0aeacb5\",\r\nFingerprint:\"TXhTUzIxAAAEOzoECAUHCc7QAAAoOnYBAAAAhOYeoDvPAAUBxQBtAB80mwALAUkPMgCOOx4P+gASAfMPrDs5AcoN2QCDAUA0hgA/AHEP3gFWOxgJqAAWAEAPmDvEAF4PcgAOAFU0bwDxANAPpgB6O2YPigAyAQMPaztfAPAPqwCOAck2zQA2AIUPpgBSOtAGGgE0ANwMmjupAGoPlgBCAHU04QAQAUEPgQDIO1cPsAA4AYgO6Ts2ATsPyQCLAVY0BgFNAJENiABWOsULUgAiADYOGJA3nv+15rIKvcMii4dvgGf9CgcrqDoLzfea/mb3sEXw/UIEqfXkCs7Aa4Lv7aeDNIkiO8L/GwBbFbKXQGDk954PdoLv97fHd4LHiU9+L3knwjb/xvzCehP65rJvgrOCbQW4gb5HmgAP93cX/A6XNqoHpgDCiC6XXTTP+VJmRgleDbe5RA9yCof+7gRPsfrztIZ9gZf8qcEXBvr+HRFzhMo/+HnKeDt3APavOLr7o4e/B05z6FPtHiA4AQJ0J5gxAcIBE8LC7cBYPAHnARD/wTs8ADoAARBQBACsAmlXDQCSAgA2O8JHxcEHAKgWhgWIxi4BMC7pwP4Hwf/7///+wf/ABf/E+vxyDwDLNkNZxE5rwHgWACz+6/v6/cJL/0dEg8DGxAsAhTx0wQRaxgwPAI0+A2CPRkYwAYVDcHPAtX0XOyVL5j9GUTloTsQVAQdQiToHVXCra1QFAKlRRpYAOg5SHsH+C8W9UTJFPsDA/Q7FqVJMY3LBwcH/BMIWO2l88Uf/wDtAxHj8QQgAYH2swMVKwRkBKoGcroXGXcHCwsLB/gTAxPj/ewgAY4KhZXo2AZSFdISFk3MWO52HAMEz/u7AOvn8RxQA84dSi4RcwH7BYsEHxfuOLf9A/g8AlE5wcfrBwH7AwcEFCATCjyD/REEaxCulkJJnZ4R0/0bB+/qEBACbqW1UEgTxqhr/MVPBBVqAwQwAm8RehKxr+sYKAG/MU8Cswkr7BABDzWB+yQCj9vb5/f0xPgQMBE/PUHPAw/8FwcTDCQC03XSxOYkZOx3i10P/W/MxS/v8/zLAS8HJALbYX8XAdkEuwgCy3jb+/z4KAH/lLccqYP8HALIvRsRgwBsAcO/MOsD4xMH9/fz9/zv++vr+///AwMIFwMb7wBkQ4Au9QpjB/pHDWmj+/Tj++jIRmw1DN/86+8U/Ed0TQ2UH1eMXBkRWCRD7FfHAavvAwSMRKzBywWz5WP/BwZLCBIx++f5wwcDBwLMdFNUwvcBpwMEEjcL4h8PAbsDBBcD5x/sEEOs5PbYFFMo4NFolESuDsGT5/8HAwMDCOsKWsMXAwcPAwgXAcPrC/sCfAxAeRznEJREoUa3B+0n7UcDDwoiIwwXCbkjF/8B/GhChZ+L7wsLDwi/AOv76zPr8/MD9/zrBxMX+\"} "
+				},
+				"url": {
+					"raw": "http://localhost:1183/api/account/matchfingerprint",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1183",
+					"path": [
+						"api",
+						"account",
+						"matchfingerprint"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "History GetAppointmentRequestList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start\": 0,\r\n    \"length\": 50000,\r\n    \"IsDoNotApplyDateRangeFilter\": \"1\",\r\n    \"IsAllServicesAppointments\": \"1\",\r\n    \"PatientId\": \"6bf4ecbc-5946-4996-acf9-6b669cb30304\",\r\n    \"IsAPI\": \"false\"\r\n}"
+				},
+				"url": {
+					"raw": "https://patient.helpful.ihealthcure.com/api/account/GetAppointmentRequestList",
+					"protocol": "https",
+					"host": [
+						"patient",
+						"helpful",
+						"ihealthcure",
+						"com"
+					],
+					"path": [
+						"api",
+						"account",
+						"GetAppointmentRequestList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Package GetAppointmentRequestList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start\": 0,\r\n    \"length\": 50000,\r\n    \"IsDoNotApplyDateRangeFilter\": \"1\",\r\n    \"IsAllServicesAppointments\": \"1\",\r\n    \"PatientId\": \"6bf4ecbc-5946-4996-acf9-6b669cb30304\",\r\n    \"IsAPI\": \"false\",\r\n    \"IsOnlyPackageAppointmentBookings\":\"1\"\r\n}"
+				},
+				"url": {
+					"raw": "https://patient.helpful.ihealthcure.com/api/account/GetAppointmentRequestList",
+					"protocol": "https",
+					"host": [
+						"patient",
+						"helpful",
+						"ihealthcure",
+						"com"
+					],
+					"path": [
+						"api",
+						"account",
+						"GetAppointmentRequestList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Packages GetPackageGroupServicesDetail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start\": 0,\r\n    \"length\": 50000\r\n}"
+				},
+				"url": {
+					"raw": "https://patient.helpful.ihealthcure.com/api/Appointment/GetPackageGroupServicesDetail",
+					"protocol": "https",
+					"host": [
+						"patient",
+						"helpful",
+						"ihealthcure",
+						"com"
+					],
+					"path": [
+						"api",
+						"Appointment",
+						"GetPackageGroupServicesDetail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RefundRequest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"AppointmentNo\": \"PP0303AAAA0585\",\r\n    \"PatientId\": \"6bf4ecbc-5946-4996-acf9-6b669cb30304\",\r\n    \"BookingNo\": \"0303AAAA0119\",\r\n    \"BranchId\": \"535ac67e-3466-4a8f-96a5-69dcb73b00b6\",\r\n    \"TypeBit\": 8,\r\n    \"Remarks\": \"Refund\"\r\n}"
+				},
+				"url": {
+					"raw": "https://patient.helpful.ihealthcure.com/api/appointment/RefundRequest",
+					"protocol": "https",
+					"host": [
+						"patient",
+						"helpful",
+						"ihealthcure",
+						"com"
+					],
+					"path": [
+						"api",
+						"appointment",
+						"RefundRequest"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
