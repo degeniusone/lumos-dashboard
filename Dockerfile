@@ -1,5 +1,6 @@
 # Base image
 FROM node:20-alpine AS base
+RUN apk add --no-cache openssl1.1-compat
 
 # Install dependencies only when needed
 FROM base AS deps
