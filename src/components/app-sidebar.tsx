@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Image from "next/image"
 import {
   LayoutDashboard,
   MessageSquare,
@@ -36,13 +37,13 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/",
       id: "dashboard",
       icon: LayoutDashboard,
     },
     {
       title: "Inbox",
-      url: "#",
+      url: "/inbox",
       id: "inbox",
       icon: MessageSquare,
       badge: 12,
@@ -79,6 +80,11 @@ const data = {
       icon: Settings,
     },
     {
+      title: "Integrations",
+      url: "/integrations",
+      icon: LayoutDashboard, // Using a simple icon for now, ideally 'Network' or 'Link' if available
+    },
+    {
       title: "Get Help",
       url: "#",
       icon: HelpCircle,
@@ -93,7 +99,7 @@ interface AppSidebarProps extends React.ComponentProps<typeof Sidebar> {
 
 export function AppSidebar({ activeRoute, onNavigate, ...props }: AppSidebarProps) {
   return (
-    <Sidebar collapsible="icon" {...props}>
+    <Sidebar collapsible="icon" className="border-none bg-zinc-950" {...props}>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
@@ -101,12 +107,17 @@ export function AppSidebar({ activeRoute, onNavigate, ...props }: AppSidebarProp
               size="lg"
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
-              <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-gradient-to-br from-pink-500 to-orange-400 text-sidebar-primary-foreground">
-                {/* Lumos Icon/Logo placeholder */}
-                <span className="font-bold text-white text-md">L</span>
+              <div className="flex aspect-square size-12 items-center justify-center rounded-lg text-sidebar-primary-foreground">
+                <Image
+                  src="/images/clintrio icon.png"
+                  alt="Clintrio Icon"
+                  width={48}
+                  height={48}
+                  className="size-10 object-contain"
+                />
               </div>
-              <div className="grid flex-1 text-left text-sm leading-tight">
-                <span className="truncate font-semibold">Lumos Clinic</span>
+              <div className="grid flex-1 text-left text-sm leading-tight transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.1)] overflow-hidden group-data-[collapsible=icon]:w-0 group-data-[collapsible=icon]:opacity-0 group-data-[collapsible=icon]:scale-90 group-data-[collapsible=icon]:-translate-x-4">
+                <span className="truncate font-semibold text-lg">clintrio</span>
                 <span className="truncate text-xs">Medical & Aesthetics</span>
               </div>
             </SidebarMenuButton>
